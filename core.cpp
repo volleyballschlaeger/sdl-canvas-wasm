@@ -21,7 +21,7 @@ void mainloop(void *arg)
     
     // moving blue rectangle
     SDL_Rect r;
-    r.x = ctx->iteration % 255;
+    r.x = ctx->iteration % 320;
     r.y = 50;
     r.w = 50;
     r.h = 50;
@@ -38,7 +38,7 @@ int main()
     SDL_Init(SDL_INIT_VIDEO);
     SDL_Window *window;
     SDL_Renderer *renderer;
-    SDL_CreateWindowAndRenderer(255, 255, 0, &window, &renderer);
+    SDL_CreateWindowAndRenderer(320, 200, 0, &window, &renderer);
 
     context ctx;
     ctx.renderer = renderer;
